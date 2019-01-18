@@ -203,12 +203,12 @@ function! s:MoveCursor(count, dir, pattern, shouldSaveMark, mode)
             break
         endif
 
-        if line("$") - line("w$") < &scrolloff
+       " if line("$") - line("w$") < &scrolloff
             " Need to ignore &scrolloff when at the bottom of the file
             let maxLine = line("$")
-        else
-            let maxLine = line("w$") - &scrolloff
-        endif
+        "else
+         "   let maxLine = line("w$") - &scrolloff
+       " endif
 
         if newPos[0] > maxLine
             break
